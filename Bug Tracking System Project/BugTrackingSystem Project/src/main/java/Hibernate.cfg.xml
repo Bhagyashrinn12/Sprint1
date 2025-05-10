@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration 
+	DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd" -->
+<hibernate-configuration>
+	<session-factory>
+		<!-- Database connection settings -->
+		<property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+		<property name="connection.url">jdbc:mysql://localhost:3307/bugtrackingsystem1</property>
+		<property name="connection.username">root</property>
+		<property name="connection.password">Soun@0220</property>
+		<!-- Automatically create or update database schema -->
+		<property name="hbm2ddl.auto">update</property>
+		<!-- Specify the dialect for your database -->
+		<property name="dialect">org.hibernate.dialect.MySQL8Dialect</property>
+		<!-- Enable or disable showing SQL statements in the console -->
+		<property name="show_sql">false</property>
+		<property name="format_sql">true</property>
+		<mapping class="Entity.Project"/>
+		<mapping class="Entity.Developer"/>
+		<mapping class="Entity.Tester"/>
+		<mapping class="Entity.Bug"/>
+		<mapping class="Entity.Report"/>
+		<!--<mapping class="com.student.association.Question"/>	
+        <mapping class="com.student.association.Answer"/>-->
+
+		</session-factory>
+</hibernate-configuration>
